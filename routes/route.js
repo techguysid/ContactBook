@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 
 
 let client = new elasticsearch.Client({
-  host: 'localhost:9200',   //default port
+  host: 'http://paas:792aedac99cb67ca8deb19d4dc0ed1aa@thorin-us-east-1.searchly.com',   //default port
 });
 
 let indexName = 'plivotest'
