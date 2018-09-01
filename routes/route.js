@@ -74,11 +74,11 @@ router.get('/contactByEmail/:email',authenticate,function(req, res) {
                index: indexName,
                type: 'contact',
                body: {
-                 "query": {
-                 "match": {
-                   "email":input
-                 }
-                 }
+                   query: {
+                       query_string:{
+                          query: input // the query string is the mail of the contact
+                       }
+                   }
                }
        }).then(function (resp) {
             let results = resp.hits.hits.map(function(hit){
